@@ -1,0 +1,85 @@
+<% content_for :head do %>
+<script>
+
+  $(document).ready(function() {
+    $(function() {
+      $(".add-products-ul li").draggable({ 
+        revert: "invalid" 
+      });
+
+      $( "#droppable" ).droppable({
+            hoverClass: "ui-state-hover",
+            drop: function(event, ui) {
+                  var productId =  ui.draggable.attr('product');
+                  var kitId = ui.draggable.attr('kit');
+                  //ui.draggable.fadeOut();
+                  $('#droppable ul').append(ui.draggable);
+                  ui.draggable.attr('style','')
+                  //console.log(ui.draggable);
+
+                 $.ajax({
+                     type: "POST",
+                     url: "/kit_products",
+                     data: "?kit_id="+kitId+"&product_id="+ productId,
+                     url: "/kit_products?kit_id="+kitId+"&product_id="+ productId,
+                     processData: false
+                                  });
+
+                  }
+              });
+
+
+    });
+});
+</script>
+<% end %>
+
+
+<h1><%= @kit.title %></h1>
+<%= link_to 'Edit', edit_kit_path(@kit) %> |
+<%= link_to 'Back', kits_path %>
+
+<h2>Tree</h2>
+<ul>
+  <%= nested_kits(@kit.subtree.arrange) %>
+</ul>
+
+<div id="droppable">
+  <h2>Products in this Kit</h2>
+  <ul>
+    <% @kit_products.each do |kit_product| %>
+      <li>
+        <%= link_to kit_product.product.title, kit_product.product %> |
+        <%= link_to 'Remove', kit_product_path(kit_product), :confirm => 'Are you sure?', :method => :delete %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+<h2>All products including children</h2>
+<ul>
+  <% @kit.all_products_including_children.each do |product| %>
+    <li><%= link_to product.title, product %></li>
+  <% end %>
+</ul>
+
+
+<% content_for :right_sidebar do %>
+  <h2>Add Products</h2>
+  <ul class="add-products-ul">
+    <% Product.all.each do |product| %>
+        <%= content_tag :li, product.title, :product => product.id, :kit => @kit.id %>
+        <%# content_tag :span, product.title, :product => product.id, :kit => @kit.id %>
+        <%# link_to "Add to Kit", {:controller => 'kit_products', :action => :create, :kit_id => @kit, :product_id => product}, :method => :post %>
+        <%# content_tag :span, product.title, :product => product.id, :kit => @kit.id %>  
+      <% end %>
+  </ul>
+
+ <h2>Add Kits</h2>
+  <ul>
+    <% Kit.all.each do |kit| %>
+      <li><%= link_to kit.title, kit_kit_path(@kit, :child => kit), :method => :put %></li>
+    <% end %>
+  </ul>
+
+<% end %>

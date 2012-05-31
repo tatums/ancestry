@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Products: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'style', 'scaffold', 'bootstrap-responsive', 'bootstrap' %>
+  <%= javascript_include_tag 'jquery', 'jquery-ui' %>
+  <%= yield :head %>  
+</head>
+<body>
+
+<p style="color: green"><%= flash[:notice] %></p>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3 well">
+          <ul>
+            <li><%= link_to 'Kits', kits_path %></li>
+            <li><%= link_to 'Products', products_path %></li>
+          </ul>
+        </div>  
+       
+        <div class="span6 well">
+          <%= yield  %>
+        </div>
+
+        <div class="span3 well">
+          <%= yield :right_sidebar %>
+        </div>
+
+      </div>
+    </div>
+
+
+
+</body>
+</html>
+

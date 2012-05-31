@@ -1,0 +1,12 @@
+<% form_for(@product) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+  <%= f.text_field "title"%>
+  </p>
+
+  <p>
+    <%= f.submit "Save" %>
+  </p>
+<% end %>
+

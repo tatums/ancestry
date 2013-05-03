@@ -1,1 +1,1 @@
-rvm use ruby-1.8.7-p352@ancestry --create
+rvm use ree-1.8.7-2012.02@ancestry --create

@@ -18,7 +18,6 @@ config.action_mailer.raise_delivery_errors = false
 
 
 config.gem 'ancestry', :version => '1.2.3'
-#config.gem 'sqlite3-ruby'
-config.gem 'sqlite3-ruby', :lib => 'sqlite3'
+config.gem 'sqlite3'
 config.gem 'pry'
 config.gem 'thin'

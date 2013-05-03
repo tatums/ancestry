@@ -28405,3 +28405,392 @@ Rendering kits/show
   [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" [0m
   [4;35;1mKit Load (0.5ms)[0m   [0mSELECT * FROM "kits" [0m
 Completed in 49ms (View: 34, DB: 4) | 200 OK [http://localhost/kits/8]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-02 19:46:26) [GET]
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: products: SELECT * FROM "products" [0m
+
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: products: SELECT * FROM "products" ):
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract_adapter.rb:188:in `log'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/activerecord-2.2.2/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/activerecord-2.2.2/lib/active_record/connection_adapters/sqlite_adapter.rb:372:in `catch_schema_changes'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/activerecord-2.2.2/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/activerecord-2.2.2/lib/active_record/connection_adapters/sqlite_adapter.rb:275:in `select'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/database_statements.rb:7:in `select_all_without_query_cache'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:60:in `select_all'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:81:in `cache_sql'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:60:in `select_all'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/activerecord-2.2.2/lib/active_record/base.rb:635:in `find_by_sql'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/activerecord-2.2.2/lib/active_record/base.rb:1490:in `find_every'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/activerecord-2.2.2/lib/active_record/base.rb:589:in `find'
+    /app/controllers/products_controller.rb:8:in `index'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/tatum/.rvm/rubies/ree-1.8.7-2012.02/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/thin-1.5.1/lib/rack/adapter/rails.rb:89:in `call'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/thin-1.5.1/lib/rack/adapter/rails.rb:69:in `call'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/thin-1.5.1/lib/thin/connection.rb:81:in `pre_process'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/thin-1.5.1/lib/thin/connection.rb:79:in `catch'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/thin-1.5.1/lib/thin/connection.rb:79:in `pre_process'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/thin-1.5.1/lib/thin/connection.rb:54:in `process'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/thin-1.5.1/lib/thin/connection.rb:39:in `receive_data'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run_machine'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/thin-1.5.1/lib/thin/backends/base.rb:63:in `start'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/thin-1.5.1/lib/thin/server.rb:159:in `start'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/thin-1.5.1/lib/thin/controllers/controller.rb:86:in `start'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/thin-1.5.1/lib/thin/runner.rb:187:in `send'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/thin-1.5.1/lib/thin/runner.rb:187:in `run_command'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/thin-1.5.1/lib/thin/runner.rb:152:in `run!'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/rails-2.2.2/lib/commands/servers/thin.rb:20
+    /Users/tatum/.rvm/rubies/ree-1.8.7-2012.02/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Users/tatum/.rvm/rubies/ree-1.8.7-2012.02/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Users/tatum/.rvm/rubies/ree-1.8.7-2012.02/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Users/tatum/.rvm/rubies/ree-1.8.7-2012.02/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (71.5ms)
+Rendered /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (3.4ms)
+Rendering /Users/tatum/.rvm/gems/ree-1.8.7-2012.02@ancestry/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.4ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProducts (20120523231656)
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (2.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20120523231656')[0m
+Migrating to CreateKits (20120524211711)
+  [4;36;1mSQL (1.6ms)[0m   [0;1mCREATE TABLE "kits" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "ancestry" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20120524211711')[0m
+Migrating to AddIndexToKits (20120524211815)
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCREATE INDEX "index_kits_on_ancestry" ON "kits" ("ancestry")[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20120524211815')[0m
+Migrating to AddTestData (20120524212416)
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("title", "updated_at", "created_at") VALUES('Product 1', '2013-05-03 00:46:41', '2013-05-03 00:46:41')[0m
+  [4;35;1mProduct Create (0.4ms)[0m   [0mINSERT INTO "products" ("title", "updated_at", "created_at") VALUES('Product 2', '2013-05-03 00:46:41', '2013-05-03 00:46:41')[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("title", "updated_at", "created_at") VALUES('Product 3', '2013-05-03 00:46:41', '2013-05-03 00:46:41')[0m
+  [4;35;1mProduct Create (0.6ms)[0m   [0mINSERT INTO "products" ("title", "updated_at", "created_at") VALUES('Product 4', '2013-05-03 00:46:41', '2013-05-03 00:46:41')[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("title", "updated_at", "created_at") VALUES('Product 5', '2013-05-03 00:46:41', '2013-05-03 00:46:41')[0m
+  [4;35;1mProduct Create (0.5ms)[0m   [0mINSERT INTO "products" ("title", "updated_at", "created_at") VALUES('Product 6', '2013-05-03 00:46:41', '2013-05-03 00:46:41')[0m
+  [4;36;1mProduct Create (0.4ms)[0m   [0;1mINSERT INTO "products" ("title", "updated_at", "created_at") VALUES('Product 7', '2013-05-03 00:46:41', '2013-05-03 00:46:41')[0m
+  [4;35;1mProduct Create (0.6ms)[0m   [0mINSERT INTO "products" ("title", "updated_at", "created_at") VALUES('Product 8', '2013-05-03 00:46:41', '2013-05-03 00:46:41')[0m
+  [4;36;1mProduct Create (0.4ms)[0m   [0;1mINSERT INTO "products" ("title", "updated_at", "created_at") VALUES('Product 9', '2013-05-03 00:46:41', '2013-05-03 00:46:41')[0m
+  [4;35;1mProduct Create (0.4ms)[0m   [0mINSERT INTO "products" ("title", "updated_at", "created_at") VALUES('Product 10', '2013-05-03 00:46:41', '2013-05-03 00:46:41')[0m
+  [4;36;1mKit Create (0.5ms)[0m   [0;1mINSERT INTO "kits" ("title", "updated_at", "ancestry", "created_at") VALUES('Kit 1', '2013-05-03 00:46:41', NULL, '2013-05-03 00:46:41')[0m
+  [4;35;1mKit Create (0.4ms)[0m   [0mINSERT INTO "kits" ("title", "updated_at", "ancestry", "created_at") VALUES('Kit 2', '2013-05-03 00:46:41', NULL, '2013-05-03 00:46:41')[0m
+  [4;36;1mKit Create (0.5ms)[0m   [0;1mINSERT INTO "kits" ("title", "updated_at", "ancestry", "created_at") VALUES('Kit 3', '2013-05-03 00:46:41', NULL, '2013-05-03 00:46:41')[0m
+  [4;35;1mKit Create (0.5ms)[0m   [0mINSERT INTO "kits" ("title", "updated_at", "ancestry", "created_at") VALUES('Kit 4', '2013-05-03 00:46:41', NULL, '2013-05-03 00:46:41')[0m
+  [4;36;1mKit Create (0.5ms)[0m   [0;1mINSERT INTO "kits" ("title", "updated_at", "ancestry", "created_at") VALUES('Kit 5', '2013-05-03 00:46:41', NULL, '2013-05-03 00:46:41')[0m
+  [4;35;1mKit Create (0.4ms)[0m   [0mINSERT INTO "kits" ("title", "updated_at", "ancestry", "created_at") VALUES('Kit 6', '2013-05-03 00:46:41', NULL, '2013-05-03 00:46:41')[0m
+  [4;36;1mKit Create (0.4ms)[0m   [0;1mINSERT INTO "kits" ("title", "updated_at", "ancestry", "created_at") VALUES('Kit 7', '2013-05-03 00:46:41', NULL, '2013-05-03 00:46:41')[0m
+  [4;35;1mKit Create (0.6ms)[0m   [0mINSERT INTO "kits" ("title", "updated_at", "ancestry", "created_at") VALUES('Kit 8', '2013-05-03 00:46:41', NULL, '2013-05-03 00:46:41')[0m
+  [4;36;1mKit Create (0.5ms)[0m   [0;1mINSERT INTO "kits" ("title", "updated_at", "ancestry", "created_at") VALUES('Kit 9', '2013-05-03 00:46:41', NULL, '2013-05-03 00:46:41')[0m
+  [4;35;1mKit Create (0.4ms)[0m   [0mINSERT INTO "kits" ("title", "updated_at", "ancestry", "created_at") VALUES('Kit 10', '2013-05-03 00:46:41', NULL, '2013-05-03 00:46:41')[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20120524212416')[0m
+Migrating to CreateKitProducts (20120526011852)
+  [4;35;1mSQL (1.4ms)[0m   [0mCREATE TABLE "kit_products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "kit_id" integer, "product_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20120526011852')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("kit_products")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("kits")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_kits_on_ancestry')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("products")[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-02 19:47:06) [GET]
+  [4;35;1mProduct Load (1.1ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/application
+Rendering products/index
+Completed in 23ms (View: 15, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing KitsController#index (for 127.0.0.1 at 2013-05-02 19:47:10) [GET]
+  [4;36;1mKit Load (1.0ms)[0m   [0;1mSELECT * FROM "kits" [0m
+Rendering template within layouts/application
+Rendering kits/index
+Completed in 25ms (View: 14, DB: 1) | 200 OK [http://localhost/kits]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-02 19:47:12) [GET]
+  [4;35;1mProduct Load (0.9ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/application
+Rendering products/index
+Completed in 23ms (View: 14, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing KitsController#index (for 127.0.0.1 at 2013-05-02 19:47:15) [GET]
+  [4;36;1mKit Load (1.0ms)[0m   [0;1mSELECT * FROM "kits" [0m
+Rendering template within layouts/application
+Rendering kits/index
+Completed in 34ms (View: 23, DB: 1) | 200 OK [http://localhost/kits]
+
+
+Processing KitsController#edit (for 127.0.0.1 at 2013-05-02 19:47:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mKit Load (0.3ms)[0m   [0mSELECT * FROM "kits" WHERE ("kits"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering kits/edit
+Rendered kits/_form (3.2ms)
+Completed in 20ms (View: 10, DB: 0) | 200 OK [http://localhost/kits/1/edit]
+
+
+Processing KitsController#index (for 127.0.0.1 at 2013-05-02 19:47:22) [GET]
+  [4;36;1mKit Load (1.0ms)[0m   [0;1mSELECT * FROM "kits" [0m
+Rendering template within layouts/application
+Rendering kits/index
+Completed in 157ms (View: 14, DB: 1) | 200 OK [http://localhost/kits]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-02 19:47:24) [GET]
+  [4;35;1mProduct Load (0.9ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/application
+Rendering products/index
+Completed in 22ms (View: 14, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#edit (for 127.0.0.1 at 2013-05-02 19:47:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProduct Load (0.2ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering products/edit
+Rendered products/_form (2.5ms)
+Completed in 17ms (View: 8, DB: 0) | 200 OK [http://localhost/products/1/edit]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-02 19:47:27) [GET]
+  [4;35;1mProduct Load (0.9ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/application
+Rendering products/index
+Completed in 22ms (View: 13, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing KitsController#index (for 127.0.0.1 at 2013-05-02 19:47:30) [GET]
+  [4;36;1mKit Load (1.0ms)[0m   [0;1mSELECT * FROM "kits" [0m
+Rendering template within layouts/application
+Rendering kits/index
+Completed in 28ms (View: 16, DB: 1) | 200 OK [http://localhost/kits]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-02 19:47:33) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/application
+Rendering products/index
+Completed in 21ms (View: 13, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2013-05-02 19:47:42) [GET]
+Rendering template within layouts/application
+Rendering products/new
+Rendered products/_form (2.4ms)
+Completed in 18ms (View: 9, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing KitsController#index (for 127.0.0.1 at 2013-05-02 19:47:45) [GET]
+  [4;36;1mKit Load (1.6ms)[0m   [0;1mSELECT * FROM "kits" [0m
+Rendering template within layouts/application
+Rendering kits/index
+Completed in 26ms (View: 15, DB: 2) | 200 OK [http://localhost/kits]
+
+
+Processing KitsController#destroy (for 127.0.0.1 at 2013-05-02 19:47:49) [DELETE]
+  Parameters: {"id"=>"10", "authenticity_token"=>"3e82c3f699b71d97e83fa968ac5b04faaa39f43d"}
+  [4;35;1mKit Load (0.2ms)[0m   [0mSELECT * FROM "kits" WHERE ("kits"."id" = 10) [0m
+  [4;36;1mKit Load (0.2ms)[0m   [0;1mSELECT * FROM "kits" WHERE (ancestry like '10/%' or ancestry = '10') [0m
+  [4;35;1mKit Destroy (0.5ms)[0m   [0mDELETE FROM "kits" WHERE "id" = 10[0m
+Redirected to http://localhost:3000/kits
+Completed in 19ms (DB: 1) | 302 Found [http://localhost/kits/10]
+
+
+Processing KitsController#index (for 127.0.0.1 at 2013-05-02 19:47:49) [GET]
+  [4;36;1mKit Load (1.0ms)[0m   [0;1mSELECT * FROM "kits" [0m
+Rendering template within layouts/application
+Rendering kits/index
+Completed in 29ms (View: 13, DB: 1) | 200 OK [http://localhost/kits]
+
+
+Processing KitsController#edit (for 127.0.0.1 at 2013-05-02 19:47:51) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mKit Load (0.3ms)[0m   [0mSELECT * FROM "kits" WHERE ("kits"."id" = 9) [0m
+Rendering template within layouts/application
+Rendering kits/edit
+Rendered kits/_form (3.5ms)
+Completed in 19ms (View: 10, DB: 0) | 200 OK [http://localhost/kits/9/edit]
+
+
+Processing KitsController#show (for 127.0.0.1 at 2013-05-02 19:47:53) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mKit Load (0.2ms)[0m   [0;1mSELECT * FROM "kits" WHERE ("kits"."id" = 9) [0m
+Rendering template within layouts/application
+Rendering kits/show
+  [4;35;1mKit Load (0.6ms)[0m   [0mSELECT * FROM "kits" WHERE (id = 9 or ancestry like '9/%' or ancestry = '9') ORDER BY (case when ancestry is null then 0 else 1 end), ancestry[0m
+  [4;36;1mKitProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "kit_products" WHERE ("kit_products".kit_id = 9) [0m
+  [4;35;1mKit Load (1.0ms)[0m   [0mSELECT * FROM "kits" WHERE ("kits"."ancestry" = '9') [0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT "products".* FROM "products" INNER JOIN kit_products ON products.id = kit_products.product_id WHERE (("kit_products".kit_id = 9)) [0m
+  [4;35;1mProduct Load (0.5ms)[0m   [0mSELECT * FROM "products" [0m
+  [4;36;1mKit Load (0.5ms)[0m   [0;1mSELECT * FROM "kits" [0m
+Completed in 41ms (View: 25, DB: 3) | 200 OK [http://localhost/kits/9]
+
+
+Processing KitsController#show (for 127.0.0.1 at 2013-05-02 19:48:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mKit Load (0.2ms)[0m   [0mSELECT * FROM "kits" WHERE ("kits"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering kits/show
+  [4;36;1mKit Load (0.4ms)[0m   [0;1mSELECT * FROM "kits" WHERE (id = 1 or ancestry like '1/%' or ancestry = '1') ORDER BY (case when ancestry is null then 0 else 1 end), ancestry[0m
+  [4;35;1mKitProduct Load (0.2ms)[0m   [0mSELECT * FROM "kit_products" WHERE ("kit_products".kit_id = 1) [0m
+  [4;36;1mKit Load (0.2ms)[0m   [0;1mSELECT * FROM "kits" WHERE ("kits"."ancestry" = '1') [0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT "products".* FROM "products" INNER JOIN kit_products ON products.id = kit_products.product_id WHERE (("kit_products".kit_id = 1)) [0m
+  [4;36;1mProduct Load (0.5ms)[0m   [0;1mSELECT * FROM "products" [0m
+  [4;35;1mKit Load (0.6ms)[0m   [0mSELECT * FROM "kits" [0m
+Completed in 38ms (View: 23, DB: 2) | 200 OK [http://localhost/kits/1]
+
+
+Processing KitsController#update (for 127.0.0.1 at 2013-05-02 19:48:05) [PUT]
+  Parameters: {"id"=>"1", "kit_id"=>"1", "authenticity_token"=>"3e82c3f699b71d97e83fa968ac5b04faaa39f43d", "child"=>"1"}
+  [4;36;1mKit Load (0.4ms)[0m   [0;1mSELECT * FROM "kits" WHERE ("kits"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "kits" WHERE ("kits"."id" = 1) [0m
+Redirected to #<Kit:0x103582128>
+Completed in 15ms (DB: 0) | 302 Found [http://localhost/kits/1/kits/1?child=1]
+
+
+Processing KitsController#show (for 127.0.0.1 at 2013-05-02 19:48:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mKit Load (0.3ms)[0m   [0;1mSELECT * FROM "kits" WHERE ("kits"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering kits/show
+  [4;35;1mKit Load (2.1ms)[0m   [0mSELECT * FROM "kits" WHERE (id = 1 or ancestry like '1/%' or ancestry = '1') ORDER BY (case when ancestry is null then 0 else 1 end), ancestry[0m
+  [4;36;1mKitProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "kit_products" WHERE ("kit_products".kit_id = 1) [0m
+  [4;35;1mKit Load (0.2ms)[0m   [0mSELECT * FROM "kits" WHERE ("kits"."ancestry" = '1') [0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT "products".* FROM "products" INNER JOIN kit_products ON products.id = kit_products.product_id WHERE (("kit_products".kit_id = 1)) [0m
+  [4;35;1mProduct Load (0.5ms)[0m   [0mSELECT * FROM "products" [0m
+  [4;36;1mKit Load (0.6ms)[0m   [0;1mSELECT * FROM "kits" [0m
+Completed in 65ms (View: 46, DB: 4) | 200 OK [http://localhost/kits/1]
+
+
+Processing KitsController#update (for 127.0.0.1 at 2013-05-02 19:48:08) [PUT]
+  Parameters: {"id"=>"1", "kit_id"=>"1", "authenticity_token"=>"3e82c3f699b71d97e83fa968ac5b04faaa39f43d", "child"=>"1"}
+  [4;35;1mKit Load (0.3ms)[0m   [0mSELECT * FROM "kits" WHERE ("kits"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "kits" WHERE ("kits"."id" = 1) [0m
+Redirected to #<Kit:0x103400228>
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/kits/1/kits/1?child=1]
+
+
+Processing KitsController#show (for 127.0.0.1 at 2013-05-02 19:48:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mKit Load (0.2ms)[0m   [0mSELECT * FROM "kits" WHERE ("kits"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering kits/show
+  [4;36;1mKit Load (0.5ms)[0m   [0;1mSELECT * FROM "kits" WHERE (id = 1 or ancestry like '1/%' or ancestry = '1') ORDER BY (case when ancestry is null then 0 else 1 end), ancestry[0m
+  [4;35;1mKitProduct Load (0.3ms)[0m   [0mSELECT * FROM "kit_products" WHERE ("kit_products".kit_id = 1) [0m
+  [4;36;1mKit Load (0.2ms)[0m   [0;1mSELECT * FROM "kits" WHERE ("kits"."ancestry" = '1') [0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT "products".* FROM "products" INNER JOIN kit_products ON products.id = kit_products.product_id WHERE (("kit_products".kit_id = 1)) [0m
+  [4;36;1mProduct Load (0.5ms)[0m   [0;1mSELECT * FROM "products" [0m
+  [4;35;1mKit Load (1.5ms)[0m   [0mSELECT * FROM "kits" [0m
+Completed in 41ms (View: 24, DB: 3) | 200 OK [http://localhost/kits/1]
+
+
+Processing KitsController#update (for 127.0.0.1 at 2013-05-02 19:48:10) [PUT]
+  Parameters: {"id"=>"1", "kit_id"=>"1", "authenticity_token"=>"3e82c3f699b71d97e83fa968ac5b04faaa39f43d", "child"=>"9"}
+  [4;36;1mKit Load (0.2ms)[0m   [0;1mSELECT * FROM "kits" WHERE ("kits"."id" = 1) [0m
+  [4;35;1mKit Load (0.2ms)[0m   [0mSELECT * FROM "kits" WHERE ("kits"."id" = 9) [0m
+  [4;36;1mKit Load (0.2ms)[0m   [0;1mSELECT * FROM "kits" WHERE (ancestry like '9/%' or ancestry = '9') [0m
+  [4;35;1mKit Update (0.6ms)[0m   [0mUPDATE "kits" SET "updated_at" = '2013-05-03 00:48:10', "ancestry" = '1' WHERE "id" = 9[0m
+Redirected to #<Kit:0x103289bd8>
+Completed in 151ms (DB: 1) | 302 Found [http://localhost/kits/1/kits/1?child=9]
+
+
+Processing KitsController#show (for 127.0.0.1 at 2013-05-02 19:48:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mKit Load (0.3ms)[0m   [0;1mSELECT * FROM "kits" WHERE ("kits"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering kits/show
+  [4;35;1mKit Load (0.5ms)[0m   [0mSELECT * FROM "kits" WHERE (id = 1 or ancestry like '1/%' or ancestry = '1') ORDER BY (case when ancestry is null then 0 else 1 end), ancestry[0m
+  [4;36;1mKitProduct Load (0.2ms)[0m   [0;1mSELECT * FROM "kit_products" WHERE ("kit_products".kit_id = 1) [0m
+  [4;35;1mKit Load (0.2ms)[0m   [0mSELECT * FROM "kits" WHERE ("kits"."ancestry" = '1') [0m
+  [4;36;1mKit Load (0.2ms)[0m   [0;1mSELECT * FROM "kits" WHERE ("kits"."ancestry" = '1/9') [0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT "products".* FROM "products" INNER JOIN kit_products ON products.id = kit_products.product_id WHERE (("kit_products".kit_id = 9)) [0m
+  [4;36;1mProduct Load (0.2ms)[0m   [0;1mSELECT "products".* FROM "products" INNER JOIN kit_products ON products.id = kit_products.product_id WHERE (("kit_products".kit_id = 1)) [0m
+  [4;35;1mProduct Load (0.5ms)[0m   [0mSELECT * FROM "products" [0m
+  [4;36;1mKit Load (0.5ms)[0m   [0;1mSELECT * FROM "kits" [0m
+Completed in 42ms (View: 23, DB: 3) | 200 OK [http://localhost/kits/1]
+
+
+Processing KitsController#show (for 127.0.0.1 at 2013-05-02 19:48:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mKit Load (0.3ms)[0m   [0mSELECT * FROM "kits" WHERE ("kits"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering kits/show
+  [4;36;1mKit Load (0.5ms)[0m   [0;1mSELECT * FROM "kits" WHERE (id = 1 or ancestry like '1/%' or ancestry = '1') ORDER BY (case when ancestry is null then 0 else 1 end), ancestry[0m
+  [4;35;1mKitProduct Load (0.2ms)[0m   [0mSELECT * FROM "kit_products" WHERE ("kit_products".kit_id = 1) [0m
+  [4;36;1mKit Load (0.3ms)[0m   [0;1mSELECT * FROM "kits" WHERE ("kits"."ancestry" = '1') [0m
+  [4;35;1mKit Load (0.2ms)[0m   [0mSELECT * FROM "kits" WHERE ("kits"."ancestry" = '1/9') [0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT "products".* FROM "products" INNER JOIN kit_products ON products.id = kit_products.product_id WHERE (("kit_products".kit_id = 9)) [0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT "products".* FROM "products" INNER JOIN kit_products ON products.id = kit_products.product_id WHERE (("kit_products".kit_id = 1)) [0m
+  [4;36;1mProduct Load (0.5ms)[0m   [0;1mSELECT * FROM "products" [0m
+  [4;35;1mKit Load (0.5ms)[0m   [0mSELECT * FROM "kits" [0m
+Completed in 43ms (View: 25, DB: 3) | 200 OK [http://localhost/kits/1]
+
+
+Processing KitsController#index (for 127.0.0.1 at 2013-05-02 19:48:32) [GET]
+  [4;36;1mKit Load (1.0ms)[0m   [0;1mSELECT * FROM "kits" [0m
+Rendering template within layouts/application
+Rendering kits/index
+Completed in 24ms (View: 14, DB: 1) | 200 OK [http://localhost/kits]
+
+
+Processing KitsController#show (for 127.0.0.1 at 2013-05-02 19:48:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mKit Load (0.3ms)[0m   [0mSELECT * FROM "kits" WHERE ("kits"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering kits/show
+  [4;36;1mKit Load (0.5ms)[0m   [0;1mSELECT * FROM "kits" WHERE (id = 1 or ancestry like '1/%' or ancestry = '1') ORDER BY (case when ancestry is null then 0 else 1 end), ancestry[0m
+  [4;35;1mKitProduct Load (0.2ms)[0m   [0mSELECT * FROM "kit_products" WHERE ("kit_products".kit_id = 1) [0m
+  [4;36;1mKit Load (0.2ms)[0m   [0;1mSELECT * FROM "kits" WHERE ("kits"."ancestry" = '1') [0m
+  [4;35;1mKit Load (0.2ms)[0m   [0mSELECT * FROM "kits" WHERE ("kits"."ancestry" = '1/9') [0m
+  [4;36;1mProduct Load (0.2ms)[0m   [0;1mSELECT "products".* FROM "products" INNER JOIN kit_products ON products.id = kit_products.product_id WHERE (("kit_products".kit_id = 9)) [0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT "products".* FROM "products" INNER JOIN kit_products ON products.id = kit_products.product_id WHERE (("kit_products".kit_id = 1)) [0m
+  [4;36;1mProduct Load (0.5ms)[0m   [0;1mSELECT * FROM "products" [0m
+  [4;35;1mKit Load (0.5ms)[0m   [0mSELECT * FROM "kits" [0m
+Completed in 40ms (View: 24, DB: 3) | 200 OK [http://localhost/kits/1]
